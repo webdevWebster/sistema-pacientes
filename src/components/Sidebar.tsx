@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 const SidebarContainer = styled.div<{ isCollapsed: boolean }>`
   width: ${(props) => (props.isCollapsed ? '80px' : '250px')};
-  background-color: #2f3542;
+  background-color: #030656;
   color: #ffffff;
   transition: width 0.3s ease;
   display: flex;
