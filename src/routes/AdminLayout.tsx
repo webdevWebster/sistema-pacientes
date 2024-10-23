@@ -1,11 +1,8 @@
 import React from 'react';
-import Sidebar from './Sidebar';
+import Sidebar from '../components/Sidebar';
 import { Route, Routes } from 'react-router-dom';
-import Dashboard from '../pages/Dashboard';
-import Pacientes from '../pages/Pacientes';
-import Relatorios from '../pages/Relatorios';
-import Configuracoes from '../pages/Configuracoes';
-import Header from './Header';
+import Pacientes from '../pagesAdmin/Pacientes';
+import Header from '../components/Header';
 
 const AdminLayout: React.FC = () => {
   return (
@@ -18,10 +15,7 @@ const AdminLayout: React.FC = () => {
         
         {/* Conteúdo principal */}
           <Routes>
-            <Route path="/" element={<Dashboard />} />
             <Route path="/pacientes" element={<Pacientes />} />
-            <Route path="/relatorios" element={<Relatorios />} />
-            <Route path="/configuracoes" element={<Configuracoes />} />
           </Routes>
       </div>
 

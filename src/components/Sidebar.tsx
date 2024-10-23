@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FaHome, FaUser, FaCog, FaChartPie } from 'react-icons/fa';
+import { FaUser } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -48,10 +48,7 @@ const ToggleButton = styled.button`
 `;
 
 const menuItems = [
-  { icon: <FaHome />, label: 'Dashboard', path: '/' },
   { icon: <FaUser />, label: 'Pacientes', path: '/pacientes' },
-  { icon: <FaChartPie />, label: 'Relatórios', path: '/relatorios' },
-  { icon: <FaCog />, label: 'Configurações', path: '/configuracoes' },
 ];
 
 export function Sidebar() {

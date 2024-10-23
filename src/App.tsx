@@ -1,6 +1,6 @@
 import { BrowserRouter as Router } from 'react-router-dom';
-import AdminLayout from './components/AdminLayout';
 import './globalStyles.css'
+import AdminLayout from './routes/AdminLayout';
 
 function App() {
 
