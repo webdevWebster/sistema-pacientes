@@ -1,29 +1,29 @@
-// src/components/Login.tsx
+// src/components/Signup.tsx
 import React, { useState } from 'react';
 import { useAuth } from '../hooks/useAuth';
 import { useNavigate } from 'react-router-dom';
 
-const Login: React.FC = () => {
+const Signup: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const { login } = useAuth();
+  const { signup } = useAuth();
   const navigate = useNavigate();
 
-  const handleLogin = async (e: React.FormEvent) => {
+  const handleSignup = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      await login(email, password);
-      // Se o login for bem-sucedido, redirecione o usuário para a página inicial
+      await signup(email, password);
+      // Redireciona para a página inicial após o cadastro
       navigate('/');
     } catch (error) {
       console.error(error);
-      alert('Erro ao fazer login');
+      alert('Erro ao fazer cadastro');
     }
   };
 
   return (
-    <form onSubmit={handleLogin}>
-      <h2>Login</h2>
+    <form onSubmit={handleSignup}>
+      <h2>Cadastro</h2>
       <input
         type="email"
         placeholder="Email"
@@ -38,9 +38,9 @@ const Login: React.FC = () => {
         onChange={(e) => setPassword(e.target.value)}
         required
       />
-      <button type="submit">Login</button>
+      <button type="submit">Cadastrar</button>
     </form>
   );
 };
 
-export default Login;
+export default Signup;

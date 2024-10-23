@@ -4,7 +4,12 @@ import { Route, Routes } from 'react-router-dom';
 import Pacientes from '../pagesAdmin/Pacientes';
 import Header from '../components/Header';
 
+import { useAuth } from '../hooks/useAuth';
+
 const AdminLayout: React.FC = () => {
+
+  const { currentUser, logout } = useAuth();
+
   return (
     <div style={{ display: 'flex', height: '100vh', flexDirection: 'column' }}>
       
